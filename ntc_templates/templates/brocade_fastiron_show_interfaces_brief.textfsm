@@ -8,7 +8,7 @@ Value tagonly (Yes|No|N\/A)
 Value pvid (\d+|N\/A|None)
 Value priority ([a-zA-Z0-9\/]+)
 Value mac ([A-Fa-f0-9\.]{14}|[a-zA-Z\/]+)
-Value name (\S+)
+Value name (.*)
 
 Start
   ^Port\s+Link\s+State\s+Dupl\s+Speed\s+Trunk\s+Tag\s+Pvid\s+Pri\s+MAC\s+Name
