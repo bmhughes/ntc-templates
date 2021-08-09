@@ -1,12 +1,15 @@
-Value PROTOCOL (\S+)
+Value COUNT (\d+)
 Value Required IP_ADDRESS ([A-Fa-f0-9:\.]+)
 Value AGE (\S+)
 Value Required MAC_ADDRESS ([A-Fa-f0-9\.]{14})
 Value TYPE (\S+)
 Value Required PORT (\S+)
+Value STATUS (\S+)
 
 Start
-  ^Protocol\s+Address\s+Age \(min\)\s+Hardware Addr\s+Type\s+Interface
-  ^${PROTOCOL}\s+${IP_ADDRESS}\s+${AGE}\s+${MAC_ADDRESS}\s+${TYPE}\s+${PORT} -> Record
+  ^Total number of ARP entries: ${COUNT}
+  ^Entries
+  ^No\.\s+IP Address\s+MAC Address\s+Type\s+Age\s+Port\s+Status
+  ^\d+\s+${IP_ADDRESS}\s+${MAC_ADDRESS}\s+${TYPE}\s+${AGE}\s+${PORT}\s+${STATUS} -> Record
   ^\s*$$
   ^. -> Error
