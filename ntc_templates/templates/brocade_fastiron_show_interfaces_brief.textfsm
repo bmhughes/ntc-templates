@@ -7,7 +7,7 @@ Value trunkid (\d+|None)
 Value tagonly (Yes|No|N\/A)
 Value pvid (\d+|N\/A|None)
 Value priority ([a-zA-Z0-9\/]+)
-Value mac ([A-Fa-f0-9\.]{14})
+Value mac ([A-Fa-f0-9\.]{14}|[a-zA-Z\/]+)
 Value name (\S+)
 
 Start
